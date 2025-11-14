@@ -1,0 +1,213 @@
+/* style.css - Tema Veritas (com logo no CSS) */
+
+/* Cores Principais:
+ * #058E4A (Verde Principal)
+ * #A1D5BB (Verde Secundário/Claro)
+ * #000000 (Preto)
+ * #FFFFFF (Branco)
+ */
+
+* { box-sizing: border-box; }
+
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    margin:0; 
+    background:#f7f7f7; 
+    color:#000000; 
+}
+
+.container { 
+    max-width: 980px; 
+    margin: 0 auto; 
+    padding: 16px; 
+}
+
+/* --- Cabeçalho e Navegação --- */
+header { 
+    background:#058E4A; /* Verde Principal */
+    color:#fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container { 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+}
+
+header h1 { 
+    /* Estilos base para h1 */
+    margin:0; 
+    font-size:20px; 
+}
+
+header h1.logo-text { 
+    /* 1. Define o tamanho do elemento para caber a imagem da logo */
+    width: 150px; /* Largura aproximada para logo + nome */
+    height: 32px; /* Altura da logo */
+    
+    /* 2. Adiciona a imagem da logo como background */
+    background-image: url('logo.png');
+    background-size: contain; /* Ajusta a imagem dentro do elemento */
+    background-repeat: no-repeat;
+    background-position: left center;
+    
+    /* 3. Oculta o texto para mostrar apenas a imagem */
+    text-indent: -9999px; /* Mova o texto para fora da tela */
+    overflow: hidden;
+}
+
+header nav a { 
+    color:#fff; 
+    text-decoration:none; 
+    margin-left:12px; 
+    transition: opacity 0.2s;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+/* --- Botões Primários --- */
+.btn { 
+    background:#058E4A; 
+    color:#fff; 
+    padding:8px 12px; 
+    border-radius:4px; 
+    border:1px solid #058E4A; 
+    cursor:pointer; 
+    text-decoration:none; 
+    display:inline-block;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+    background: #046b38; 
+    border-color: #046b38;
+}
+
+/* --- Botões Secundários/Outros --- */
+.btn.secondary { 
+    background:#6c757d; 
+    border-color: #6c757d;
+}
+
+.btn.secondary:hover {
+    background: #5a6268;
+    border-color: #5a6268;
+}
+
+.btn.danger { 
+    background:#b00020; 
+    border-color: #b00020;
+}
+
+.btn.danger:hover {
+    background: #8b0018;
+    border-color: #8b0018;
+}
+
+h2 { margin-top:16px; }
+
+/* --- Tabela --- */
+.table { 
+    width:100%; 
+    border-collapse: collapse; 
+    background:#fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.table th, .table td { 
+    padding:10px; 
+    border:1px solid #e0e0e0; 
+    text-align:left; 
+}
+
+.table th { 
+    background:#A1D5BB; 
+    color: #000000;
+}
+
+.table tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+/* --- Formulário --- */
+.form-card { 
+    background:#fff; 
+    padding:20px; 
+    border:1px solid #A1D5BB; 
+    border-radius:6px; 
+    margin-top:24px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-row { 
+    display:flex; 
+    gap:16px; 
+    flex-wrap:wrap; 
+}
+
+.form-group { 
+    flex:1; 
+    min-width:220px; 
+    margin-bottom:12px; 
+}
+
+label { 
+    display:block; 
+    font-weight:bold; 
+    margin-bottom:6px; 
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="time"], select, textarea {
+  width:100%; 
+  padding:10px; 
+  border:1px solid #ccc; 
+  border-radius:4px;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="time"]:focus, select:focus, textarea:focus {
+    border-color: #058E4A;
+    outline: none;
+}
+
+.form-actions { 
+    margin-top:16px; 
+    display:flex; 
+    gap:8px; 
+    justify-content: flex-end; 
+}
+
+/* --- Mensagens de Alerta --- */
+.alert { 
+    padding:10px; 
+    border-radius:4px; 
+    margin:12px 0; 
+    font-weight: bold;
+}
+
+.alert-success { 
+    background:#e7f6ed; 
+    border:1px solid #058E4A; 
+    color: #046b38;
+}
+
+.alert-error { 
+    background:#fdecea; 
+    border:1px solid #b00020; 
+    color: #b00020;
+}
+
+/* --- Rodapé --- */
+footer { 
+    background:#A1D5BB; 
+    color: #000000;
+    margin-top:24px; 
+}
+
+footer .container { 
+    padding:12px 16px; 
+    text-align: center;
+}
